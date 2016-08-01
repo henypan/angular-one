@@ -11,3 +11,7 @@
 3. **$rootScope**: is the scope created on the HTML element that contains the ng-app directory
 	a. if a variable in both current scope and and rootScope shares same name, the current scope  
 	will override the root scope one.  
+
+4. Filter: by using a pipe '|' function, it will apply the filter to existing data.
+
+5. Angular JS data direction: model -> controller -> function
