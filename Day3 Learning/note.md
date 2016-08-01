@@ -13,5 +13,5 @@
 	will override the root scope one.  
 
 4. Filter: by using a pipe '|' function, it will apply the filter to existing data.
-
+	a. Example: using "filter" based on the user input can achive key-stroke search.  
 5. Angular JS data direction: model -> controller -> function
