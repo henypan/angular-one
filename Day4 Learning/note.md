@@ -25,3 +25,21 @@ app.controller('myCtrl', function($scope, $location) {
         $scope.myHeader = "How are you today?";
     }, 2000);
 ```
+
+## HTTP service
+1. Method: .delete(), get(), head(), jsonp(), patch(), post(), put()  
+2. Good example: 
+
+```javascript
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("wrongfilename.htm")
+    .then(function(response) {
+        //First function handles success
+        $scope.content = response.data;
+    }, function(response) {
+        //Second function handles error
+        $scope.content = "Something went wrong";
+    });
+});
+```
