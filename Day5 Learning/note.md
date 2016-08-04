@@ -12,3 +12,4 @@
 </table>
 Try it Yourself »
 ```
+3. $odd and $even are used to create strip pattern on the table.

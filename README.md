@@ -6,3 +6,8 @@ Angular JS learning plan.
 2. **ng-app**: angular JS model 
 3. **ng-controller**: angular JS controller function
 4. **ng-model**: which is the data available for the view
+5. **ng-option**: options in Angular JS selection directive.
+```javascript
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+```
