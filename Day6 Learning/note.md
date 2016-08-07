@@ -9,3 +9,4 @@
 <p ng-show="hour > 12">I am visible.</p>
 </div>
 ```
+3. **ng-hide**: oppo of ng-show.
