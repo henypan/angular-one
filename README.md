@@ -11,3 +11,5 @@ Angular JS learning plan.
 <select ng-model="selectedName" ng-options="x for x in names">
 </select>
 ```
+
+6. **ng-init**: initialize the ng model value.
