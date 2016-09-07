@@ -6,17 +6,17 @@
 </head>
 <body>
     <h2>Customers</h2>
-    <div class="container" ng-controller="CustomersController">
+    <div class="container" ng-controller="CustomersController as ctrl">
     Filter: <input type="text" ng-model="customerFilter.name" />
     <br /><br />
     <table>
         <tr>
-            <th ng-click="doSort('name')">Name</th>
-            <th ng-click="doSort('city')">City</th>
-            <th ng-click="doSort('orderTotal')">Order Total</th>
-            <th ng-click="doSort('joined')">Joined</th>
+            <th ng-click="ctrl.doSort('name')">Name</th>
+            <th ng-click="ctrl.doSort('city')">City</th>
+            <th ng-click="ctrl.doSort('orderTotal')">Order Total</th>
+            <th ng-click="ctrl.doSort('joined')">Joined</th>
         </tr>
-        <tr ng-repeat="cust in customers | limitTo:5 | filter: customerFilter |orderBy:sortBy:reverse ">
+        <tr ng-repeat="cust in ctrl.customers | limitTo:5 | filter: customerFilter |orderBy:ctrl.sortBy:ctrl.reverse ">
             <td>{{ cust.name | uppercase}}</td>
             <td>{{ cust.city }}</td>
             <td>{{ cust.orderTotal | currency: '$'}}</td>
@@ -24,12 +24,12 @@
         </tr>
     </table>
     <br>
-    <span>Total Customers: {{ customers.length}} </span>
+    <span>Total Customers: {{ ctrl.customers.length}} </span>
     </div>
     <script src="../angular.js"></script>
     <script>
         var app = angular.module('customersApp', []);
     </script>
-    <script src="app/controllers/customersController.js"></script>
+    <script src="app/controllers/customersControllerWithAs.js"></script>
 </body>
 </html>
