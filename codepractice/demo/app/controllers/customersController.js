@@ -1,6 +1,15 @@
-(function(){
-	var customersFactory = function() {
-	var customers = [
+(function() {
+    
+    var CustomersController = function ($scope) {
+        $scope.sortBy = 'name';
+        $scope.reverse = false;
+        
+        $scope.doSort = function(propName) {
+           $scope.sortBy = propName;
+           $scope.reverse = !$scope.reverse;
+        };
+        
+        $scope.customers= [
             {
                 id: 1, 
                 joined: '2000-12-02', 
@@ -63,11 +72,11 @@
                 ]
             }
         ];
-        var factory = {};
-        factory.getCustomers = function() {
-        	return customers;
-        };
-        return factory;
-    }
-    angular.module('customerApp').factory('customersFactory', customersFactory);
+    };
+    
+    CustomersController.$inject = ['$scope'];
+
+    angular.module('customersApp')
+      .controller('CustomersController', CustomersController);
+    
 }());
