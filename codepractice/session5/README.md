@@ -1,1 +1,1 @@
-# demo of ES API client
+# Session 5 - Factories and Services
