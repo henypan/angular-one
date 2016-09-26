@@ -1,1 +1,1 @@
-# Session 5 - Factories and Services
+# Demo app
